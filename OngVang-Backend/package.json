@@ -1,7 +1,8 @@
 {
   "name": "ongvang-backend",
   "version": "1.0.0",
-  "description": "Mock API backend for OngVang Restaurant Management System",
+  "private": true,
+  "description": "API backend for OngVang Restaurant Management System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
