@@ -1,0 +1,9 @@
+.employee-intro { align-items: center; }
+.employee-overview { margin-bottom: 1rem; }
+.employee-panel .toolbar-row { margin-bottom: 1rem; }
+.employee-panel .toolbar-row input { max-width: 460px; }
+.employee-address { min-width: 150px; max-width: 240px; white-space: normal; }
+.employee-contact small, .employee-name small { display: block; color: var(--muted); margin-top: .25rem; }
+.employee-code { white-space: nowrap; font-weight: 700; color: var(--primary); }
+.employee-form { min-width: min(620px, 82vw); }
+@media (max-width: 700px) { .employee-intro { align-items: flex-start; flex-direction: column; gap: 1rem; } }

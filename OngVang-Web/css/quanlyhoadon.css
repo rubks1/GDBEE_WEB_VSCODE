@@ -1,0 +1,163 @@
+.toolbar-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+.invoice-detail-btn {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.4rem 0.65rem;
+  color: var(--navy-800);
+}
+
+.invoice-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.invoice-pay-btn {
+  border: 1px solid var(--brand-600);
+  border-radius: 8px;
+  background: var(--brand-500);
+  padding: 0.4rem 0.65rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.invoice-pay-btn:hover {
+  background: var(--brand-600);
+}
+
+.invoice-cancel-btn {
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  background: transparent;
+  padding: 0.4rem 0.65rem;
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.invoice-cancel-btn:hover {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.tag.success {
+  background: rgba(16,185,129,0.12);
+  color: var(--success);
+}
+
+.tag.warning {
+  background: rgba(245,158,11,0.12);
+  color: #b45309;
+}
+
+.tag.info {
+  background: rgba(59,130,246,0.1);
+  color: var(--info);
+}
+
+.invoice-intro {
+  margin-bottom: 0.9rem;
+}
+
+.invoice-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.invoice-intro h2 {
+  margin: 0.35rem 0 0.2rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.invoice-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.77rem;
+}
+
+.invoice-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 0.85rem;
+}
+
+.invoice-overview article {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+}
+
+.invoice-overview article > span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.invoice-overview article > span i {
+  color: var(--brand-600);
+}
+
+.invoice-overview strong {
+  overflow: hidden;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.invoice-overview small {
+  color: var(--muted);
+  font-size: 0.63rem;
+}
+
+@media (max-width: 760px) {
+  .invoice-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #exportInvoices {
+    min-height: 36px;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .toolbar-row {
+    flex-direction: column;
+  }
+}

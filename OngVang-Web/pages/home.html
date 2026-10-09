@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ - Golden Bee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <script defer src="../js/app.js"></script>
+    <script defer src="../components/sidebar.js"></script>
+    <script defer src="../components/topbar.js"></script>
+    <script defer src="../components/modal.js"></script>
+    <script defer src="../components/toast.js"></script>
+    <script defer src="../components/loading.js"></script>
+    <script defer src="../js/home.js"></script>
+  </head>
+  <body data-page="home">
+    <div class="admin-layout">
+      <div id="sidebar"></div>
+      <main class="admin-main">
+        <div id="topbar"></div>
+        <div class="content">
+          <section class="page-intro">
+            <div>
+              <span class="eyebrow"><span class="status-dot"></span> CA ĐANG HOẠT ĐỘNG</span>
+              <h2>Chào buổi tối, Golden Bee</h2>
+              <p>Tổng quan vận hành và doanh thu của nhà hàng hôm nay.</p>
+            </div>
+            <div class="intro-actions">
+              <span class="sync-indicator"><i class="fa-solid fa-arrows-rotate"></i> Đồng bộ trực tiếp</span>
+              <a class="btn btn-primary" href="hoadon.html"><i class="fa-solid fa-plus"></i> Tạo hóa đơn</a>
+            </div>
+          </section>
+
+          <section class="grid stats-grid">
+            <article class="stat-card">
+              <div class="stat-topline"><span class="label">Tổng số bàn</span><i class="fa-solid fa-table-cells-large stat-icon"></i></div>
+              <strong>48</strong>
+              <small>12 bàn đang sẵn sàng</small>
+            </article>
+            <article class="stat-card">
+              <div class="stat-topline"><span class="label">Đơn đang xử lý</span><i class="fa-solid fa-bell-concierge stat-icon"></i></div>
+              <strong>19</strong>
+              <small>7 đơn cần thanh toán</small>
+            </article>
+            <article class="stat-card">
+              <div class="stat-topline"><span class="label">Doanh thu hôm nay</span><i class="fa-solid fa-coins stat-icon"></i></div>
+              <strong>24.5M</strong>
+              <small><span class="positive-change"><i class="fa-solid fa-arrow-trend-up"></i> 12,8%</span> so với hôm qua</small>
+            </article>
+            <article class="stat-card">
+              <div class="stat-topline"><span class="label">Khách hàng</span><i class="fa-solid fa-user-group stat-icon"></i></div>
+              <strong>564</strong>
+              <small>Khách đã phục vụ trong tháng</small>
+            </article>
+          </section>
+
+          <div class="dashboard-main-grid">
+            <section class="panel revenue-panel">
+              <div class="panel-header">
+                <div>
+                  <span class="eyebrow">HIỆU SUẤT</span>
+                  <h2>Doanh thu theo thời gian</h2>
+                  <p>Biến động doanh thu trong 7 ngày gần nhất</p>
+                </div>
+                <select class="form-control slim" aria-label="Khoảng thời gian">
+                  <option>7 ngày</option>
+                  <option>30 ngày</option>
+                </select>
+              </div>
+              <div class="panel-body">
+                <div class="revenue-summary">
+                  <div>
+                    <span class="muted">Tổng doanh thu</span>
+                    <h3>68.400.000đ</h3>
+                  </div>
+                  <span class="chart-period">21 — 27 Tháng 9</span>
+                </div>
+                <div class="chart-wrap">
+                  <div class="chart-axis"><span>12tr</span><span>8tr</span><span>4tr</span><span>0</span></div>
+                  <div class="chart-placeholder" role="img" aria-label="Biểu đồ doanh thu 7 ngày gần nhất">
+                    <div class="bar-column"><div class="bar" style="height:45%"></div><span>T2</span></div>
+                    <div class="bar-column"><div class="bar" style="height:62%"></div><span>T3</span></div>
+                    <div class="bar-column"><div class="bar" style="height:58%"></div><span>T4</span></div>
+                    <div class="bar-column"><div class="bar" style="height:68%"></div><span>T5</span></div>
+                    <div class="bar-column"><div class="bar" style="height:72%"></div><span>T6</span></div>
+                    <div class="bar-column"><div class="bar" style="height:84%"></div><span>T7</span></div>
+                    <div class="bar-column"><div class="bar today-bar" style="height:92%"></div><span>CN</span></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel floor-panel">
+              <div class="panel-header">
+                <div><span class="eyebrow">TRẠNG THÁI SÀN</span><h2>Sức chứa nhà hàng</h2><p>Cập nhật tình trạng bàn hiện tại</p></div>
+                <a class="text-link" href="datban.html">Sơ đồ bàn <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="panel-body">
+                <div class="occupancy-value"><strong>75%</strong><span>36 / 48 bàn đang sử dụng</span></div>
+                <div class="occupancy-track"><span style="width:75%"></span></div>
+                <div class="floor-legend">
+                  <div><span class="legend-dot available-dot"></span><span>Trống</span><strong>12</strong></div>
+                  <div><span class="legend-dot occupied-dot"></span><span>Đang phục vụ</span><strong>28</strong></div>
+                  <div><span class="legend-dot reserved-dot"></span><span>Đã đặt</span><strong>8</strong></div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="grid quick-grid">
+            <a class="quick-link" href="datban.html"><i class="fa-solid fa-calendar-plus"></i><span><strong>Đặt bàn mới</strong><small>Chọn vị trí và lịch hẹn</small></span><i class="fa-solid fa-arrow-right link-arrow"></i></a>
+            <a class="quick-link" href="hoadon.html"><i class="fa-solid fa-basket-shopping"></i><span><strong>Gọi món tại bàn</strong><small>Tạo hóa đơn và thanh toán</small></span><i class="fa-solid fa-arrow-right link-arrow"></i></a>
+            <a class="quick-link" href="quanly.html"><i class="fa-solid fa-box-open"></i><span><strong>Quản lý danh mục</strong><small>Món ăn, nhân sự, voucher</small></span><i class="fa-solid fa-arrow-right link-arrow"></i></a>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>Hóa đơn gần đây</h2>
+                <p>Giao dịch mới nhất trong hệ thống</p>
+              </div>
+              <a class="text-link" href="quanlyhoadon.html">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="panel-body">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Mã</th>
+                      <th>Bàn</th>
+                      <th>Khách hàng</th>
+                      <th>Ngày</th>
+                      <th>Trạng thái</th>
+                      <th>Thanh toán</th>
+                    </tr>
+                  </thead>
+                  <tbody id="recentInvoices"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

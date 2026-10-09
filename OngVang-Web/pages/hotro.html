@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trợ giúp - Golden Bee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/hotro.css" />
+    <script defer src="../js/app.js"></script>
+    <script defer src="../components/sidebar.js"></script>
+    <script defer src="../components/topbar.js"></script>
+    <script defer src="../components/modal.js"></script>
+    <script defer src="../components/toast.js"></script>
+    <script defer src="../components/loading.js"></script>
+    <script defer src="../js/hotro.js"></script>
+  </head>
+  <body data-page="hotro">
+    <div class="admin-layout">
+      <div id="sidebar"></div>
+      <main class="admin-main">
+        <div id="topbar"></div>
+        <div class="content">
+          <section class="help-hero">
+            <div><span class="eyebrow">TRUNG TÂM TRỢ GIÚP</span><h2>Chúng tôi có thể giúp gì?</h2><p>Tìm hướng dẫn nhanh hoặc gửi yêu cầu cho đội ngũ hỗ trợ.</p></div>
+            <label class="help-search"><i class="fa-solid fa-magnifying-glass"></i><input id="helpSearch" type="search" placeholder="Tìm câu hỏi hoặc chủ đề..." /></label>
+          </section>
+
+          <div class="help-layout">
+            <section class="panel faq-panel">
+              <div class="panel-header"><div><h2>Câu hỏi thường gặp</h2><p>Hướng dẫn cho các thao tác phổ biến</p></div><span class="tag info" id="faqCount">6 hướng dẫn</span></div>
+              <div class="panel-body faq-list" id="faqList">
+                <details class="faq-item" data-search="đặt bàn khu vực sức chứa khách hàng">
+                  <summary><span><i class="fa-solid fa-chair"></i> Làm thế nào để tạo một lượt đặt bàn?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Mở “Bàn & đặt chỗ”, chọn khu vực và bàn còn trống phù hợp sức chứa, sau đó nhập khách, ngày, giờ và số người để xác nhận.</p>
+                </details>
+                <details class="faq-item" data-search="gọi món thanh toán hóa đơn giỏ hàng">
+                  <summary><span><i class="fa-solid fa-bag-shopping"></i> Tôi thêm món và thanh toán ở đâu?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Vào “Gọi món”, tìm món hoặc lọc theo danh mục, điều chỉnh số lượng trong giỏ rồi chọn loại đơn và phương thức thanh toán.</p>
+                </details>
+                <details class="faq-item" data-search="lịch sử hóa đơn tra cứu khách hàng trạng thái">
+                  <summary><span><i class="fa-solid fa-receipt"></i> Tra cứu hóa đơn đã tạo như thế nào?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Mở “Hóa đơn”, tìm theo mã hoặc tên khách hàng, dùng bộ lọc trạng thái và chọn “Chi tiết” để xem món cùng tổng tiền.</p>
+                </details>
+                <details class="faq-item" data-search="menu món ăn sửa danh mục giá nhân viên voucher">
+                  <summary><span><i class="fa-solid fa-boxes-stacked"></i> Tôi cập nhật món ăn hoặc thông tin danh mục ở đâu?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Trong “Danh mục & nhân sự”, chọn loại dữ liệu, nhấn “Sửa” ở mục cần cập nhật hoặc “Thêm mục” để tạo bản ghi mock mới.</p>
+                </details>
+                <details class="faq-item" data-search="dark mode giao diện tối cài đặt tùy chọn">
+                  <summary><span><i class="fa-solid fa-moon"></i> Làm sao bật giao diện tối?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Bật “Chế độ tối” trong Cài đặt. Tuỳ chọn được lưu trong trình duyệt này.</p>
+                </details>
+                <details class="faq-item" data-search="dữ liệu mock localstorage database api lưu trình duyệt">
+                  <summary><span><i class="fa-solid fa-database"></i> Dữ liệu hiện được lưu ở đâu?</span><i class="fa-solid fa-chevron-down"></i></summary>
+                  <p>Trong giai đoạn này dữ liệu demo được lưu trong trình duyệt và một số màn hình đọc mock API. Chưa có kết nối cơ sở dữ liệu thật.</p>
+                </details>
+                <p id="faqEmpty" class="faq-empty hidden">Không tìm thấy câu hỏi phù hợp.</p>
+              </div>
+            </section>
+
+            <aside class="help-side">
+              <section class="panel contact-panel">
+                <div class="panel-header"><div><h2>Liên hệ hỗ trợ</h2><p>Đội ngũ sẵn sàng hỗ trợ trong giờ làm việc</p></div></div>
+                <div class="panel-body contact-options">
+                  <a href="tel:1900888777"><span><i class="fa-solid fa-phone"></i></span><div><small>Hotline</small><strong>1900 888 777</strong></div><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  <a href="mailto:support@goldenbee.vn"><span><i class="fa-regular fa-envelope"></i></span><div><small>Email</small><strong>support@goldenbee.vn</strong></div><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  <button id="newSupportRequest" class="btn btn-primary" type="button"><i class="fa-regular fa-paper-plane"></i> Tạo yêu cầu hỗ trợ</button>
+                </div>
+              </section>
+              <section class="support-note"><i class="fa-solid fa-circle-info"></i><div><strong>Chế độ mô phỏng</strong><p>Yêu cầu hỗ trợ sẽ được lưu trên trình duyệt, chưa gửi tới máy chủ.</p></div></section>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

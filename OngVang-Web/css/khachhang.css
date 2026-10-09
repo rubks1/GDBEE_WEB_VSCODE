@@ -1,0 +1,10 @@
+.loyalty-intro { align-items: center; }
+.loyalty-count { color: var(--muted); }
+.loyalty-count strong { color: var(--primary); font-size: 1.3rem; }
+.loyalty-layout { display: grid; grid-template-columns: minmax(260px, 340px) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.loyalty-register .panel-header > i { color: var(--primary); font-size: 1.4rem; }
+.loyalty-created { padding: 1rem; border: 1px solid #b6e3ca; border-radius: 12px; background: #effaf3; color: #17633b; }
+.loyalty-created strong { display: block; margin-top: .35rem; font-size: 1.4rem; letter-spacing: .08em; }
+.loyalty-list .toolbar-row { margin-bottom: 1rem; }
+.loyalty-list .toolbar-row input { max-width: 420px; }
+@media (max-width: 900px) { .loyalty-layout { grid-template-columns: 1fr; } }

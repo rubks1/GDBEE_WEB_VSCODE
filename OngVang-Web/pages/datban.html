@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt bàn - Golden Bee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/datban.css" />
+    <script defer src="../js/app.js"></script>
+    <script defer src="../components/sidebar.js"></script>
+    <script defer src="../components/topbar.js"></script>
+    <script defer src="../components/modal.js"></script>
+    <script defer src="../components/toast.js"></script>
+    <script defer src="../components/loading.js"></script>
+    <script defer src="../js/datban.js"></script>
+  </head>
+  <body data-page="datban">
+    <div class="admin-layout">
+      <div id="sidebar"></div>
+      <main class="admin-main">
+        <div id="topbar"></div>
+        <div class="content">
+          <section class="booking-overview" aria-label="Tình trạng bàn">
+            <div><span class="legend-dot available-dot"></span><strong id="availableTableCount">0</strong><small>Bàn trống</small></div>
+            <div><span class="legend-dot occupied-dot"></span><strong id="occupiedTableCount">0</strong><small>Đang phục vụ</small></div>
+            <div><span class="legend-dot reserved-dot"></span><strong id="reservedTableCount">0</strong><small>Đã đặt</small></div>
+            <div class="booking-overview-note"><i class="fa-regular fa-clock"></i> Cập nhật trực tiếp</div>
+          </section>
+
+          <div class="two-col">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Sơ đồ bàn</h2>
+                  <p>Chọn bàn theo khu vực và sức chứa</p>
+                </div>
+                <select id="tableZoneFilter" class="form-control slim" aria-label="Lọc khu vực">
+                  <option value="Tất cả">Tất cả khu vực</option>
+                  <option value="Trong nhà">Trong nhà</option>
+                  <option value="Sân vườn">Sân vườn</option>
+                </select>
+              </div>
+              <div class="panel-body">
+                <div class="table-map">
+                  <button class="table-seat available" type="button">Bàn 01<br><small>4 khách</small></button>
+                  <button class="table-seat selected" type="button">Bàn 02<br><small>6 khách</small></button>
+                  <button class="table-seat occupied" type="button">Bàn 03<br><small>8 khách</small></button>
+                  <button class="table-seat reserved" type="button">Bàn 04<br><small>4 khách</small></button>
+                  <button class="table-seat available" type="button">Bàn 05<br><small>2 khách</small></button>
+                  <button class="table-seat maintenance" type="button">Bàn 06<br><small>Bảo trì</small></button>
+                </div>
+                <div class="table-legend">
+                  <span><i class="legend-dot available-dot"></i> Trống</span>
+                  <span><i class="legend-dot occupied-dot"></i> Đang phục vụ</span>
+                  <span><i class="legend-dot reserved-dot"></i> Đã đặt / bảo trì</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Tạo lượt đặt bàn</h2>
+                  <p>Điền thông tin khách hàng và thời gian đặt</p>
+                </div>
+              </div>
+              <div class="panel-body form-grid">
+                <div class="form-group full">
+                  <label>Bàn đã chọn</label>
+                  <input id="selectedTable" class="form-control" value="Bàn 02" readonly />
+                </div>
+                <div class="form-group full">
+                  <label>Khách hàng</label>
+                  <select id="bookingCustomer" class="form-control">
+                    <option>Nguyễn Văn A</option>
+                    <option>Trần Thị B</option>
+                    <option>Lê Hoàng C</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Ngày đặt</label>
+                  <input id="bookingDate" class="form-control" type="date" />
+                </div>
+                <div class="form-group">
+                  <label>Giờ đặt</label>
+                  <input id="bookingTime" class="form-control" type="time" value="18:30" />
+                </div>
+                <div class="form-group full">
+                  <label>Số người</label>
+                  <input id="bookingGuests" class="form-control" type="number" value="6" min="1" max="6" />
+                </div>
+                <div class="form-group full flex-end">
+                  <button id="bookingSubmit" class="btn btn-primary" type="button">Xác nhận đặt bàn</button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel booking-list-panel">
+            <div class="panel-header">
+              <div><h2>Lịch đặt gần đây</h2><p>Các lượt đặt bàn đã ghi nhận</p></div>
+              <span class="tag info" id="bookingCount">0 lượt đặt</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Khách hàng</th><th>Bàn</th><th>Ngày</th><th>Giờ</th><th>Số khách</th><th>Trạng thái</th></tr></thead>
+                <tbody id="bookingList"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
